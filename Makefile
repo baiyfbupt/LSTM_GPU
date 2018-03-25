@@ -5,7 +5,7 @@ CC = aarch64-linux-android-clang
 CXXFLAGS = -O3 -Ofast  -fexceptions -frtti -std=c++11  -pie
 CXXFLAGS += -Winline
 CXXFLAGS += -mfpu=neon -mfloat-abi=softfp
-LDFLAGS = -Wl,-rpath /search/odin/baiyifan/android-ndk-r14b/build/AndroidARM/sysroot/usr/lib   -lGLES_mali -llog
+LDFLAGS = -Wl,-rpath AndroidARM/sysroot/usr/lib   -lGLES_mali -llog
 
 all:
 	$(CXX) $(CXXFLAGS) $(PROF) *.cpp -o lstm $(LDFLAGS)
